@@ -122,8 +122,8 @@ interface GigabitEthernet0/0/0/3
  ipv6 address 2000:abcd:68::6/64
 !
 router isis 1
+ is-type level-2-only
  net 49.0001.0000.0000.0006.00
- lsp-password keychain ISIS-DB
  address-family ipv4 unicast
   metric-style wide
   segment-routing mpls
