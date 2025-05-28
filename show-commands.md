@@ -39,3 +39,24 @@ show ip route 172.0.0.8/32
 show mpls lfib route 172.0.0.8/32
 ping mpls segment-routing isis ip 172.0.0.8/32 source 172.0.0.5
 ```
+
+## Cisco
+```
+show run formal | include isis
+show isis adj
+show isis interface brief
+show isis database
+show isis database R6.00-00 detail
+show isis database R6.00-00 verbose
+show mpls interfaces
+show mpls forwarding
+show mpls forwarding prefix 172.0.0.8/32
+show mpls lsd forwarding
+show ip route
+show ip route 172.0.0.8/32
+show cef 172.0.0.8/32
+show mpls label range
+ping mpls ipv4 172.0.0.8/32 source 172.0.0.6
+traceroute mpls ipv4 172.0.0.8/32 source 172.0.0.6
+
+```
