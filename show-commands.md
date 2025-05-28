@@ -1,0 +1,1 @@
+## Juniper show isis adjacency
