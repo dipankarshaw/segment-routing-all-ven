@@ -1,0 +1,14 @@
+## Arista
+```
+
+interface Loopback0
+   node-segment ipv4 index 45
+   node-segment ipv6 index 65
+!
+mpls ip
+!
+router isis 1
+   segment-routing mpls
+      no shutdown
+!
+```
