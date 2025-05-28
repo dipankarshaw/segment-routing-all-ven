@@ -18,5 +18,15 @@ ping mpls segment-routing isis 172.0.0.5/32 source 172.0.0.8/32
 ## Arista
 
 ```
-
+show isis adj
+show isis database
+show isis database R5.00-00 detail
+show isis segment-routing
+show isis segment-routing global-blocks
+show isis segment-routing prefix-segments
+show isis segment-routing adjacency-segments
+show mpls segment-routing bindings
+show ip route 172.0.0.8/32
+show mpls lfib route 172.0.0.8/32
+ping mpls segment-routing isis ip 172.0.0.8/32 source 172.0.0.5
 ```
