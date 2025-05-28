@@ -1,16 +1,51 @@
 ## Arista
 ```
-
+interface Ethernet2
+   description R6:Gi0-0-0-2
+   no switchport
+   ip address 10.56.0.5/24
+   ipv6 enable
+   ipv6 address 2000:abcd:56::5/64
+   isis enable 1
+   isis network point-to-point
+!
+interface Ethernet4
+   description R8:eth4
+   no switchport
+   ip address 10.58.0.5/24
+   ipv6 enable
+   ipv6 address 2000:abcd:58::5/64
+   isis enable 1
+   isis network point-to-point
+!
 interface Loopback0
+   ip address 172.0.0.5/32
+   ipv6 address abcd::5/128
    node-segment ipv4 index 45
    node-segment ipv6 index 65
+   isis enable 1
+   isis metric 1
+   isis passive
 !
+ip routing
+!
+ipv6 unicast-routing
 mpls ip
 !
 router isis 1
+   net 49.0001.0000.0000.0005.00
+   is-hostname R5
+   router-id ipv4 172.0.0.5
+   is-type level-2
+   !
+   address-family ipv4 unicast
+   !
+   address-family ipv6 unicast
+   !
    segment-routing mpls
       no shutdown
 !
+end
 ```
 
 ## Juniper
