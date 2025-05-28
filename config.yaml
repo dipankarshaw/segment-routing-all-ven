@@ -1,0 +1,5 @@
+# Configuration file for segment-routing-all-ven
+vendors:
+  - cisco
+  - juniper
+  - arista
