@@ -46,6 +46,7 @@ show run formal | include isis
 show isis adj
 show isis interface brief
 show isis database
+show isis database verbose | include SRGB
 show isis database R6.00-00 detail
 show isis database R6.00-00 verbose
 show mpls interfaces
@@ -53,10 +54,15 @@ show mpls forwarding
 show mpls forwarding prefix 172.0.0.8/32
 show mpls lsd forwarding
 show ip route
+show ip route isis
+show ip route isis private
 show ip route 172.0.0.8/32
+show ip route 172.0.0.8 detail
+show ip route 172.0.0.8 private
 show cef 172.0.0.8/32
 show mpls label range
 ping mpls ipv4 172.0.0.8/32 source 172.0.0.6
 traceroute mpls ipv4 172.0.0.8/32 source 172.0.0.6
-
+show logging | include isis
+show logging | incluse SRGB
 ```
