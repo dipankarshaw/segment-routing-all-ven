@@ -1,3 +1,5 @@
+This document includes the commands that can be used to troubleshoot segment-routing config's from different vendors'.
+
 ## Juniper 
 ```
 show isis overview
