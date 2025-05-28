@@ -2,6 +2,15 @@
 
 Repository for segment routing with all vendor configurations.
 
+## Topology
+
+```mermaid
+graph TD
+    Arista_R5 <--> Cisco_R6
+    Arista_R5  <--> Junos_R8
+    Cisco_R6 <---> Junos_R8
+```
+
 ## Overview
 
 This repository contains configuration examples and show commands for segment routing across multiple network vendors, including Arista, Cisco IOS-XR, and Juniper.

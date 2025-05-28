@@ -1,5 +1,14 @@
 This document includes the commands that can be used to troubleshoot segment-routing config's from different vendors'.
 
+## Topology
+
+```mermaid
+graph TD
+    Arista_R5 <--> Cisco_R6
+    Arista_R5  <--> Junos_R8
+    Cisco_R6 <---> Junos_R8
+```
+
 ## Juniper 
 ```
 show isis overview
